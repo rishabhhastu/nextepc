@@ -40,7 +40,7 @@ outdir = './'
 
 filenames = []
 verbosity = 0
-prefix = ""
+prefix = "S1ap_"
 
 FAIL = '\033[91m'
 WARN = '\033[93m'
@@ -253,8 +253,8 @@ for key in iesDefs:
     f.write("} %s_t;\n\n" % (re.sub('-', '_', key)))
 
 f.write("typedef struct _%s_message_t {\n" % (fileprefix))
-f.write("    %s_ProcedureCode_t procedureCode;\n" % (fileprefix_first_upper))
-f.write("    %s_Criticality_t   criticality;\n" % (fileprefix_first_upper))
+f.write("    %sProcedureCode_t procedureCode;\n" % (prefix))
+f.write("    %sCriticality_t   criticality;\n" % (prefix))
 f.write("    uint8_t            direction;\n")
 f.write("    union {\n")
 
@@ -434,7 +434,7 @@ for key in iesDefs:
             f.write("            /* Optional field */\n")
         elif ie[3] == "conditional":
             f.write("            /* Conditional field */\n")
-        f.write("            case %s_ProtocolIE_ID_%s:\n" % (fileprefix_first_upper, re.sub('-', '_', ie[0])))
+        f.write("            case %sProtocolIE_ID_%s:\n" % (prefix, re.sub('-', '_', ie[0])))
         f.write("            {\n")
         if ie[2] in ieofielist.keys():
             f.write("                %s_t *%s_p = NULL;\n\n" % (ietypeunderscore, lowerFirstCamelWord(ietypesubst)))
@@ -494,7 +494,7 @@ for key in iesDefs:
     for ie in iesDefs[key]["ies"]:
         iename = re.sub('id-', '', ie[0])
         ienameunderscore = lowerFirstCamelWord(re.sub('-', '_', iename))
-        f.write("            case %s_ProtocolIE_ID_%s:\n" % (fileprefix_first_upper, re.sub('-', '_', ie[0])))
+        f.write("            case %sProtocolIE_ID_%s:\n" % (prefix, re.sub('-', '_', ie[0])))
         f.write("            {\n")
         f.write("                %s_t *%s_p = NULL;\n" % (re.sub('-', '_', ie[2]), lowerFirstCamelWord(re.sub('-', '', ie[2]))))
         f.write("                tempDecoded = ANY_to_type_aper(&ie_p->value, &asn_DEF_%s, (void**)&%s_p);\n" % (re.sub('-', '_', ie[2]), lowerFirstCamelWord(re.sub('-', '', ie[2]))))
@@ -571,8 +571,8 @@ for key in iesDefs:
                 f.write("        memset(&%s, 0, sizeof(%s_t));\n" % (ienamefirstwordlower, ietypeunderscore))
                 f.write("\n")
                 f.write("        if (%s_encode_%s(&%s, &%s->%s) < 0) return -1;\n" % (fileprefix, ietypeunderscore.lower(), ienamefirstwordlower, lowerFirstCamelWord(re.sub('-', '_', key)), ienamefirstwordlower))
-            f.write("        if ((ie = %s_new_ie(%s_ProtocolIE_ID_%s,\n" % (fileprefix, fileprefix_first_upper, re.sub('-', '_', ie[0])))
-            f.write("                            %s_Criticality_%s,\n" % (fileprefix_first_upper, ie[1]))
+            f.write("        if ((ie = %s_new_ie(%sProtocolIE_ID_%s,\n" % (fileprefix, prefix, re.sub('-', '_', ie[0])))
+            f.write("                            %sCriticality_%s,\n" % (prefix, ie[1]))
             f.write("                            &asn_DEF_%s,\n" % (ietypeunderscore))
             if ie[2] in ieofielist.keys():
                 f.write("                            &%s)) == NULL) {\n" % (ienamefirstwordlower))
@@ -591,8 +591,8 @@ for key in iesDefs:
                 f.write("    memset(&%s, 0, sizeof(%s_t));\n" % (ienamefirstwordlower, ietypeunderscore))
                 f.write("\n")
                 f.write("    if (%s_encode_%s(&%s, &%s->%s) < 0) return -1;\n" % (fileprefix, ietypeunderscore.lower(), ienamefirstwordlower, lowerFirstCamelWord(re.sub('-', '_', key)), ienamefirstwordlower))
-            f.write("    if ((ie = %s_new_ie(%s_ProtocolIE_ID_%s,\n" % (fileprefix, fileprefix_first_upper, re.sub('-', '_', ie[0])))
-            f.write("                        %s_Criticality_%s,\n" % (fileprefix_first_upper, ie[1]))
+            f.write("    if ((ie = %s_new_ie(%sProtocolIE_ID_%s,\n" % (fileprefix, prefix, re.sub('-', '_', ie[0])))
+            f.write("                        %sCriticality_%s,\n" % (prefix, ie[1]))
             f.write("                        &asn_DEF_%s,\n" % (ietypeunderscore))
             if ie[2] in ieofielist.keys():
                 f.write("                        &%s)) == NULL) {\n" % (ienamefirstwordlower))
@@ -631,8 +631,8 @@ for (key, value) in iesDefs.items():
     f.write("    d_assert(%sIEs, return -1, \"Null param\");\n\n" % (lowerFirstCamelWord(re.sub('-', '_', i))));
 
     f.write("    for (i = 0; i < %sIEs->%s.count; i++) {\n" % (firstwordlower, re.sub('IEs', '', lowerFirstCamelWord(re.sub('-', '_', key)))))
-    f.write("        if ((ie = %s_new_ie(%s_ProtocolIE_ID_%s,\n" % (fileprefix, fileprefix_first_upper, re.sub('-', '_', ie[0])))
-    f.write("                            %s_Criticality_%s,\n" % (fileprefix_first_upper, ie[1]))
+    f.write("        if ((ie = %s_new_ie(%sProtocolIE_ID_%s,\n" % (fileprefix, prefix, re.sub('-', '_', ie[0])))
+    f.write("                            %sCriticality_%s,\n" % (prefix, ie[1]))
     f.write("                            &asn_DEF_%s,\n" % (ietypeunderscore))
     f.write("                            %sIEs->%s.array[i])) == NULL) {\n" % (firstwordlower, re.sub('IEs', '', lowerFirstCamelWord(re.sub('-', '_', key)))))
     f.write("            return -1;\n")
@@ -835,8 +835,8 @@ for (key, value) in iesDefs.items():
         f.write("    }\n")
     else:
         f.write("    cb(\"<%s-PDU>\\n\", %d, app_key);\n" % (key, len("<%s-PDU>\n" % (key))))
-        f.write("    xer_encode_local(&asn_DEF_%s_Criticality, &message_p->criticality, cb, app_key, 1);\n" % fileprefix_first_upper)
-        f.write("    xer_encode_local(&asn_DEF_%s_ProcedureCode, &message_p->procedureCode, cb, app_key, 1);\n" % fileprefix_first_upper)
+        f.write("    xer_encode_local(&asn_DEF_%sCriticality, &message_p->criticality, cb, app_key, 1);\n" % prefix)
+        f.write("    xer_encode_local(&asn_DEF_%sProcedureCode, &message_p->procedureCode, cb, app_key, 1);\n" % prefix)
 
         f.write("    cb(\"    <%s>\\n\", %d, app_key);\n" % (key, len("    <%s>\n" % (key))))
 

@@ -115,7 +115,7 @@ for line in in_file:
     # Extracting S1AP-PDU-Containers
     line = structPattern.sub(lambda x: structReplacements[x.group()], line)
     line = constantPattern.sub(lambda x: constantReplacements[x.group()], line)
-    line = line.replace('id-S1ap', 'id')
+    line = line.replace('id-S1ap-', 'id-')
     line = line.replace('GW-S1ap-S1ap-TransportLayerAddress', 'GW-TransportLayerAddress')
     line = line.replace('GW-S1ap-TransportLayerAddress', 'GW-TransportLayerAddress')
     line = line.replace('SourceMME-S1ap-S1ap-GUMMEI', 'SourceMME-GUMMEI')
