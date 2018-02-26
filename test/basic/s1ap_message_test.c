@@ -122,7 +122,7 @@ static void s1ap_message_test5(abts_case *tc, void *data)
     pkbuf_t *pkbuf;
     int result;
 
-    rv = tests1ap_build_setup_req(&pkbuf, S1ap_ENB_ID_PR_macroENB_ID, 0x54f64);
+    rv = tests1ap_build_setup_req(&pkbuf, S1AP_ENB_ID_PR_macroENB_ID, 0x54f64);
 
     ABTS_INT_EQUAL(tc, CORE_OK, rv);
     ABTS_PTR_NOTNULL(tc, pkbuf);
@@ -141,9 +141,9 @@ static void s1ap_message_test6(abts_case *tc, void *data)
     pkbuf_t *s1apbuf = NULL;
     int i;
     s1ap_message_t message;
-    S1ap_DownlinkNASTransport_IEs_t *ies = 
-        &message.s1ap_DownlinkNASTransport_IEs;
-    S1ap_NAS_PDU_t *nasPdu = &ies->nas_pdu;
+    S1AP_DownlinkNASTransport_IEs_t *ies = 
+        &message.s1AP_DownlinkNASTransport_IEs;
+    S1AP_NAS_PDU_t *nasPdu = &ies->nas_pdu;
     char buffer[1024];
     char *_result = 
     "000b4080 8c000003 00000002 00010008 00020001 001a0079 78efefef efefefef"
@@ -162,7 +162,7 @@ static void s1ap_message_test6(abts_case *tc, void *data)
     for (i = 0; i < nasPdu->size; i++)
         nasPdu->buf[i] = 0xef;
 
-    message.procedureCode = S1ap_ProcedureCode_id_downlinkNASTransport;
+    message.procedureCode = S1AP_ProcedureCode_id_downlinkNASTransport;
     message.direction = S1AP_PDU_PR_initiatingMessage;
 
     s1ap_encode_pdu(&s1apbuf, &message);

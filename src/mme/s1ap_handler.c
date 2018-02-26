@@ -21,18 +21,18 @@ void s1ap_handle_s1_setup_request(mme_enb_t *enb, s1ap_message_t *message)
 {
     char buf[CORE_ADDRSTRLEN];
 
-    S1ap_S1SetupRequestIEs_t *ies = NULL;
+    S1AP_S1SetupRequestIEs_t *ies = NULL;
     pkbuf_t *s1apbuf = NULL;
     c_uint32_t enb_id;
     int i, j;
-    S1ap_Cause_PR group = S1ap_Cause_PR_NOTHING;
+    S1AP_Cause_PR group = S1AP_Cause_PR_NOTHING;
     long cause = 0;
 
     d_assert(enb, return, "Null param");
     d_assert(enb->sock, return, "Null param");
     d_assert(message, return, "Null param");
 
-    ies = &message->s1ap_S1SetupRequestIEs;
+    ies = &message->s1AP_S1SetupRequestIEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] S1-Setup request\n");
@@ -46,17 +46,17 @@ void s1ap_handle_s1_setup_request(mme_enb_t *enb, s1ap_message_t *message)
     enb->num_of_supported_ta_list = 0;
     for (i = 0; i < ies->supportedTAs.list.count; i++)
     {
-        S1ap_SupportedTAs_Item_t *tai = NULL;
-        S1ap_TAC_t *tAC;
+        S1AP_SupportedTAs_Item_t *tai = NULL;
+        S1AP_TAC_t *tAC;
 
-        tai = (S1ap_SupportedTAs_Item_t *)ies->supportedTAs.list.array[i];
+        tai = (S1AP_SupportedTAs_Item_t *)ies->supportedTAs.list.array[i];
         tAC = &tai->tAC;
 
         for (j = 0; j < tai->broadcastPLMNs.list.count; j++)
         {
-            S1ap_PLMNidentity_t *pLMNidentity = NULL;
+            S1AP_PLMNidentity_t *pLMNidentity = NULL;
             pLMNidentity = 
-                (S1ap_PLMNidentity_t *)tai->broadcastPLMNs.list.array[j];
+                (S1AP_PLMNidentity_t *)tai->broadcastPLMNs.list.array[j];
 
             memcpy(&enb->supported_ta_list[enb->num_of_supported_ta_list].tac,
                     tAC->buf, sizeof(c_uint16_t));
@@ -80,8 +80,8 @@ void s1ap_handle_s1_setup_request(mme_enb_t *enb, s1ap_message_t *message)
     {
         d_warn("S1-Setup failure:");
         d_warn("    No supported TA exist in S1-Setup request");
-        group = S1ap_Cause_PR_misc;
-        cause = S1ap_CauseMisc_unspecified;
+        group = S1AP_Cause_PR_misc;
+        cause = S1AP_CauseMisc_unspecified;
     }
     else
     {
@@ -102,12 +102,12 @@ void s1ap_handle_s1_setup_request(mme_enb_t *enb, s1ap_message_t *message)
         {
             d_warn("S1-Setup failure:");
             d_warn("    Cannot find Served TAI. Check 'mme.tai' configuration");
-            group = S1ap_Cause_PR_misc;
-            cause = S1ap_CauseMisc_unknown_PLMN;
+            group = S1AP_Cause_PR_misc;
+            cause = S1AP_CauseMisc_unknown_PLMN;
         }
     }
 
-    if (group == S1ap_Cause_PR_NOTHING)
+    if (group == S1AP_Cause_PR_NOTHING)
     {
         d_trace(3, "[MME] S1-Setup response\n");
         d_assert(s1ap_build_setup_rsp(&s1apbuf) == CORE_OK, 
@@ -117,7 +117,7 @@ void s1ap_handle_s1_setup_request(mme_enb_t *enb, s1ap_message_t *message)
     {
         d_trace(3, "[MME] S1-Setup failure\n");
         d_assert(s1ap_build_setup_failure(
-                &s1apbuf, group, cause, S1ap_TimeToWait_v10s) == CORE_OK, 
+                &s1apbuf, group, cause, S1AP_TimeToWait_v10s) == CORE_OK, 
                 return, "s1ap_build_setup_failure() failed");
     }
 
@@ -131,17 +131,17 @@ void s1ap_handle_initial_ue_message(mme_enb_t *enb, s1ap_message_t *message)
     char buf[CORE_ADDRSTRLEN];
 
     enb_ue_t *enb_ue = NULL;
-    S1ap_InitialUEMessage_IEs_t *ies = NULL;
-    S1ap_TAI_t *tai = NULL;
-	S1ap_PLMNidentity_t *pLMNidentity = NULL;
-	S1ap_TAC_t *tAC = NULL;
-    S1ap_EUTRAN_CGI_t *eutran_cgi = NULL;
-	S1ap_CellIdentity_t	*cell_ID = NULL;
+    S1AP_InitialUEMessage_IEs_t *ies = NULL;
+    S1AP_TAI_t *tai = NULL;
+	S1AP_PLMNidentity_t *pLMNidentity = NULL;
+	S1AP_TAC_t *tAC = NULL;
+    S1AP_EUTRAN_CGI_t *eutran_cgi = NULL;
+	S1AP_CellIdentity_t	*cell_ID = NULL;
 
     d_assert(enb, return, "Null param");
     d_assert(enb->sock, return, "Null param");
 
-    ies = &message->s1ap_InitialUEMessage_IEs;
+    ies = &message->s1AP_InitialUEMessage_IEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] Initial UE Message\n");
@@ -159,7 +159,7 @@ void s1ap_handle_initial_ue_message(mme_enb_t *enb, s1ap_message_t *message)
         /* Find MME_UE if s_tmsi included */
         if (ies->presenceMask & S1AP_INITIALUEMESSAGE_IES_S_TMSI_PRESENT)
         {
-            S1ap_S_TMSI_t *s_tmsi = &ies->s_tmsi;
+            S1AP_S_TMSI_t *s_tmsi = &ies->s_tmsi;
             served_gummei_t *served_gummei = &mme_self()->served_gummei[0];
             guti_t guti;
             mme_ue_t *mme_ue = NULL;
@@ -256,7 +256,7 @@ void s1ap_handle_initial_ue_message(mme_enb_t *enb, s1ap_message_t *message)
         enb_ue->enb_ue_s1ap_id, enb_ue->mme_ue_s1ap_id, enb_ue->nas.tai.tac);
 
     d_assert(s1ap_send_to_nas(enb_ue,
-        S1ap_ProcedureCode_id_initialUEMessage, &ies->nas_pdu) == CORE_OK,,
+        S1AP_ProcedureCode_id_initialUEMessage, &ies->nas_pdu) == CORE_OK,,
         "s1ap_send_to_nas failed");
 }
 
@@ -266,9 +266,9 @@ void s1ap_handle_uplink_nas_transport(
     char buf[CORE_ADDRSTRLEN];
 
     enb_ue_t *enb_ue = NULL;
-    S1ap_UplinkNASTransport_IEs_t *ies = NULL;
+    S1AP_UplinkNASTransport_IEs_t *ies = NULL;
 
-    ies = &message->s1ap_UplinkNASTransport_IEs;
+    ies = &message->s1AP_UplinkNASTransport_IEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] Uplink NAS transport\n");
@@ -283,7 +283,7 @@ void s1ap_handle_uplink_nas_transport(
             enb_ue->enb_ue_s1ap_id, enb_ue->mme_ue_s1ap_id);
 
     d_assert(s1ap_send_to_nas(enb_ue,
-        S1ap_ProcedureCode_id_uplinkNASTransport, &ies->nas_pdu) == CORE_OK,,
+        S1AP_ProcedureCode_id_uplinkNASTransport, &ies->nas_pdu) == CORE_OK,,
         "s1ap_send_to_nas failed");
 }
 
@@ -293,9 +293,9 @@ void s1ap_handle_ue_capability_info_indication(
     char buf[CORE_ADDRSTRLEN];
 
     enb_ue_t *enb_ue = NULL;
-    S1ap_UECapabilityInfoIndicationIEs_t *ies = NULL;
+    S1AP_UECapabilityInfoIndicationIEs_t *ies = NULL;
 
-    ies = &message->s1ap_UECapabilityInfoIndicationIEs;
+    ies = &message->s1AP_UECapabilityInfoIndicationIEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] UE capability info indication\n");
@@ -310,8 +310,8 @@ void s1ap_handle_ue_capability_info_indication(
 
     if (enb_ue->mme_ue)
     {
-        S1ap_UERadioCapability_t *ue_radio_capa = NULL;
-        S1ap_UERadioCapability_t *radio_capa = NULL;
+        S1AP_UERadioCapability_t *ue_radio_capa = NULL;
+        S1AP_UERadioCapability_t *radio_capa = NULL;
         mme_ue_t *mme_ue = enb_ue->mme_ue;
 
         ue_radio_capa = &ies->ueRadioCapability;
@@ -319,15 +319,15 @@ void s1ap_handle_ue_capability_info_indication(
         /* Release the previous one */
         if (mme_ue->radio_capa)
         {
-            radio_capa = (S1ap_UERadioCapability_t *)mme_ue->radio_capa;
+            radio_capa = (S1AP_UERadioCapability_t *)mme_ue->radio_capa;
 
             if (radio_capa->buf)
                 CORE_FREE(radio_capa->buf);
             CORE_FREE(mme_ue->radio_capa);
         }
         /* Save UE radio capability */ 
-        mme_ue->radio_capa = core_calloc(1, sizeof(S1ap_UERadioCapability_t));
-        radio_capa = (S1ap_UERadioCapability_t *)mme_ue->radio_capa;
+        mme_ue->radio_capa = core_calloc(1, sizeof(S1AP_UERadioCapability_t));
+        radio_capa = (S1AP_UERadioCapability_t *)mme_ue->radio_capa;
         d_assert(radio_capa,return,"core_calloc Error");
 
         radio_capa->size = ue_radio_capa->size;
@@ -348,9 +348,9 @@ void s1ap_handle_initial_context_setup_response(
 
     mme_ue_t *mme_ue = NULL;
     enb_ue_t *enb_ue = NULL;
-    S1ap_InitialContextSetupResponseIEs_t *ies = NULL;
+    S1AP_InitialContextSetupResponseIEs_t *ies = NULL;
 
-    ies = &message->s1ap_InitialContextSetupResponseIEs;
+    ies = &message->s1AP_InitialContextSetupResponseIEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] Initial context setup response\n");
@@ -366,14 +366,14 @@ void s1ap_handle_initial_context_setup_response(
             enb_ue->enb_ue_s1ap_id, enb_ue->mme_ue_s1ap_id);
 
     for (i = 0; i < ies->e_RABSetupListCtxtSURes.
-            s1ap_E_RABSetupItemCtxtSURes.count; i++)
+            s1AP_E_RABSetupItemCtxtSURes.count; i++)
     {
         mme_sess_t *sess = NULL;
         mme_bearer_t *bearer = NULL;
-        S1ap_E_RABSetupItemCtxtSURes_t *e_rab = NULL;
+        S1AP_E_RABSetupItemCtxtSURes_t *e_rab = NULL;
 
-        e_rab = (S1ap_E_RABSetupItemCtxtSURes_t *)
-            ies->e_RABSetupListCtxtSURes.s1ap_E_RABSetupItemCtxtSURes.array[i];
+        e_rab = (S1AP_E_RABSetupItemCtxtSURes_t *)
+            ies->e_RABSetupListCtxtSURes.s1AP_E_RABSetupItemCtxtSURes.array[i];
         d_assert(e_rab, return, "Null param");
 
         sess = mme_sess_find_by_ebi(mme_ue, e_rab->e_RAB_ID);
@@ -413,9 +413,9 @@ void s1ap_handle_initial_context_setup_failure(
 
     mme_ue_t *mme_ue = NULL;
     enb_ue_t *enb_ue = NULL;
-    S1ap_InitialContextSetupFailureIEs_t *ies = NULL;
+    S1AP_InitialContextSetupFailureIEs_t *ies = NULL;
 
-    ies = &message->s1ap_InitialContextSetupFailureIEs;
+    ies = &message->s1AP_InitialContextSetupFailureIEs;
     d_assert(ies, return, "Null param");
 
     enb_ue = enb_ue_find_by_enb_ue_s1ap_id(enb, ies->eNB_UE_S1AP_ID);
@@ -459,11 +459,11 @@ void s1ap_handle_initial_context_setup_failure(
 
         d_trace(5, "    Explicit Release\n");
         rv = s1ap_send_ue_context_release_command(enb_ue,
-                S1ap_Cause_PR_nas,
+                S1AP_Cause_PR_nas,
 #if 1 /* NAS Cause: Normal Relase */
-                S1ap_CauseNas_normal_release,
+                S1AP_CauseNas_normal_release,
 #else /* NAS Cause : Detach */
-                S1ap_CauseNas_detach,
+                S1AP_CauseNas_detach,
 #endif
                 S1AP_UE_CTX_REL_UNLINK_MME_UE_CONTEXT, 0);
         d_assert(rv == CORE_OK,, "s1ap send error");
@@ -499,13 +499,13 @@ void s1ap_handle_e_rab_setup_response(
     int i;
 
     enb_ue_t *enb_ue = NULL;
-    S1ap_E_RABSetupResponseIEs_t *ies = NULL;
+    S1AP_E_RABSetupResponseIEs_t *ies = NULL;
     mme_ue_t *mme_ue = NULL;
 
     d_assert(enb, return, "Null param");
     d_assert(message, return, "Null param");
 
-    ies = &message->s1ap_E_RABSetupResponseIEs;
+    ies = &message->s1AP_E_RABSetupResponseIEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] E-RAB setup response\n");
@@ -521,13 +521,13 @@ void s1ap_handle_e_rab_setup_response(
             enb_ue->enb_ue_s1ap_id, enb_ue->mme_ue_s1ap_id);
 
     for (i = 0; i < ies->e_RABSetupListBearerSURes.
-            s1ap_E_RABSetupItemBearerSURes.count; i++)
+            s1AP_E_RABSetupItemBearerSURes.count; i++)
     {
         mme_bearer_t *bearer = NULL;
-        S1ap_E_RABSetupItemBearerSURes_t *e_rab = NULL;
+        S1AP_E_RABSetupItemBearerSURes_t *e_rab = NULL;
 
-        e_rab = (S1ap_E_RABSetupItemBearerSURes_t *)ies->
-            e_RABSetupListBearerSURes.s1ap_E_RABSetupItemBearerSURes.array[i];
+        e_rab = (S1AP_E_RABSetupItemBearerSURes_t *)ies->
+            e_RABSetupListBearerSURes.s1AP_E_RABSetupItemBearerSURes.array[i];
         d_assert(e_rab, return, "Null param");
 
         bearer = mme_bearer_find_by_ue_ebi(mme_ue, e_rab->e_RAB_ID);
@@ -573,12 +573,12 @@ void s1ap_handle_ue_context_release_request(
     enb_ue_t *enb_ue = NULL;
     mme_ue_t *mme_ue = NULL;
 
-    S1ap_UEContextReleaseRequest_IEs_t *ies = NULL;
+    S1AP_UEContextReleaseRequest_IEs_t *ies = NULL;
 
     d_assert(enb, return,);
     d_assert(message, return,);
 
-    ies = &message->s1ap_UEContextReleaseRequest_IEs;
+    ies = &message->s1AP_UEContextReleaseRequest_IEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] UE Context release request\n");
@@ -595,8 +595,8 @@ void s1ap_handle_ue_context_release_request(
                 S1AP_ERRORINDICATIONIES_CAUSE_PRESENT,
                 ies->eNB_UE_S1AP_ID,
                 ies->mme_ue_s1ap_id, 
-                S1ap_Cause_PR_radioNetwork,
-                S1ap_CauseRadioNetwork_unknown_mme_ue_s1ap_id);
+                S1AP_Cause_PR_radioNetwork,
+                S1AP_CauseRadioNetwork_unknown_mme_ue_s1ap_id);
         d_assert(rv == CORE_OK, return, "s1ap send error");
         return;
     }
@@ -608,12 +608,12 @@ void s1ap_handle_ue_context_release_request(
 
     switch(ies->cause.present)
     {
-        case S1ap_Cause_PR_radioNetwork:
-        case S1ap_Cause_PR_transport:
-        case S1ap_Cause_PR_protocol:
-        case S1ap_Cause_PR_misc:
+        case S1AP_Cause_PR_radioNetwork:
+        case S1AP_Cause_PR_transport:
+        case S1AP_Cause_PR_protocol:
+        case S1AP_Cause_PR_misc:
             break;
-        case S1ap_Cause_PR_nas:
+        case S1AP_Cause_PR_nas:
             d_warn("NAS-Cause[%d]", ies->cause.choice.nas);
         default:
             d_warn("Invalid cause group[%d]", ies->cause.present);
@@ -643,7 +643,7 @@ void s1ap_handle_ue_context_release_request(
     {
         d_trace(5, "    S1 Context Not Associated\n");
         rv = s1ap_send_ue_context_release_command(enb_ue, 
-                S1ap_Cause_PR_nas, S1ap_CauseNas_normal_release,
+                S1AP_Cause_PR_nas, S1AP_CauseNas_normal_release,
                 S1AP_UE_CTX_REL_NO_ACTION, 0);
         d_assert(rv == CORE_OK,, "s1ap send error");
     }
@@ -657,9 +657,9 @@ void s1ap_handle_ue_context_release_complete(
 
     enb_ue_t *enb_ue = NULL;
     mme_ue_t *mme_ue = NULL;
-    S1ap_UEContextReleaseComplete_IEs_t *ies = NULL;
+    S1AP_UEContextReleaseComplete_IEs_t *ies = NULL;
 
-    ies = &message->s1ap_UEContextReleaseComplete_IEs;
+    ies = &message->s1AP_UEContextReleaseComplete_IEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] UE Context release complete\n");
@@ -798,20 +798,20 @@ void s1ap_handle_path_switch_request(
     enb_ue_t *enb_ue = NULL;
     mme_ue_t *mme_ue = NULL;
 
-    S1ap_PathSwitchRequestIEs_t *ies = NULL;
-    S1ap_EUTRAN_CGI_t *eutran_cgi;
-	S1ap_PLMNidentity_t *pLMNidentity = NULL;
-	S1ap_CellIdentity_t	*cell_ID = NULL;
-    S1ap_TAI_t *tai;
-	S1ap_TAC_t *tAC = NULL;
-    S1ap_UESecurityCapabilities_t *ueSecurityCapabilities = NULL;
-	S1ap_EncryptionAlgorithms_t	*encryptionAlgorithms = NULL;
-	S1ap_IntegrityProtectionAlgorithms_t *integrityProtectionAlgorithms = NULL;
+    S1AP_PathSwitchRequestIEs_t *ies = NULL;
+    S1AP_EUTRAN_CGI_t *eutran_cgi;
+	S1AP_PLMNidentity_t *pLMNidentity = NULL;
+	S1AP_CellIdentity_t	*cell_ID = NULL;
+    S1AP_TAI_t *tai;
+	S1AP_TAC_t *tAC = NULL;
+    S1AP_UESecurityCapabilities_t *ueSecurityCapabilities = NULL;
+	S1AP_EncryptionAlgorithms_t	*encryptionAlgorithms = NULL;
+	S1AP_IntegrityProtectionAlgorithms_t *integrityProtectionAlgorithms = NULL;
     c_uint16_t eea = 0, eia = 0;
 
     d_assert(enb, return, "Null param");
 
-    ies = &message->s1ap_PathSwitchRequestIEs;
+    ies = &message->s1AP_PathSwitchRequestIEs;
     d_assert(ies, return, "Null param");
 
     d_trace(3, "[MME] Path switch request\n");
@@ -848,8 +848,8 @@ void s1ap_handle_path_switch_request(
 
         s1ap_send_path_switch_failure(enb, ies->eNB_UE_S1AP_ID,
                 ies->sourceMME_UE_S1AP_ID,
-                S1ap_Cause_PR_radioNetwork,
-                S1ap_CauseRadioNetwork_unknown_mme_ue_s1ap_id);
+                S1AP_Cause_PR_radioNetwork,
+                S1AP_CauseRadioNetwork_unknown_mme_ue_s1ap_id);
         return;
     }
 
@@ -868,7 +868,7 @@ void s1ap_handle_path_switch_request(
     {
         s1ap_send_path_switch_failure(enb, ies->eNB_UE_S1AP_ID,
                 ies->sourceMME_UE_S1AP_ID,
-                S1ap_Cause_PR_nas, S1ap_CauseNas_authentication_failure);
+                S1AP_Cause_PR_nas, S1AP_CauseNas_authentication_failure);
         return;
     }
 
@@ -909,15 +909,15 @@ void s1ap_handle_path_switch_request(
     mme_ue->ue_network_capability.eia0 = 0;
 
     for (i = 0; i < ies->e_RABToBeSwitchedDLList.
-            s1ap_E_RABToBeSwitchedDLItem.count; i++)
+            s1AP_E_RABToBeSwitchedDLItem.count; i++)
     {
         status_t rv;
 
         mme_bearer_t *bearer = NULL;
-        S1ap_E_RABToBeSwitchedDLItem_t *e_rab = NULL;
+        S1AP_E_RABToBeSwitchedDLItem_t *e_rab = NULL;
 
-        e_rab = (S1ap_E_RABToBeSwitchedDLItem_t *)ies->e_RABToBeSwitchedDLList.
-            s1ap_E_RABToBeSwitchedDLItem.array[i];
+        e_rab = (S1AP_E_RABToBeSwitchedDLItem_t *)ies->e_RABToBeSwitchedDLList.
+            s1AP_E_RABToBeSwitchedDLItem.array[i];
         d_assert(e_rab, return, "Null param");
 
         bearer = mme_bearer_find_by_ue_ebi(mme_ue, e_rab->e_RAB_ID);
@@ -949,11 +949,11 @@ void s1ap_handle_handover_required(mme_enb_t *enb, s1ap_message_t *message)
     enb_ue_t *source_ue = NULL;
     mme_ue_t *mme_ue = NULL;
 
-    S1ap_HandoverRequiredIEs_t *ies = NULL;
+    S1AP_HandoverRequiredIEs_t *ies = NULL;
 
     d_assert(enb, return,);
 
-    ies = &message->s1ap_HandoverRequiredIEs;
+    ies = &message->s1AP_HandoverRequiredIEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] Handover required\n");
@@ -1004,11 +1004,11 @@ void s1ap_handle_handover_request_ack(mme_enb_t *enb, s1ap_message_t *message)
     enb_ue_t *target_ue = NULL;
     mme_ue_t *mme_ue = NULL;
 
-    S1ap_HandoverRequestAcknowledgeIEs_t *ies = NULL;
+    S1AP_HandoverRequestAcknowledgeIEs_t *ies = NULL;
 
     d_assert(enb, return,);
 
-    ies = &message->s1ap_HandoverRequestAcknowledgeIEs;
+    ies = &message->s1AP_HandoverRequestAcknowledgeIEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] Handover request acknowledge\n");
@@ -1033,13 +1033,13 @@ void s1ap_handle_handover_request_ack(mme_enb_t *enb, s1ap_message_t *message)
     d_trace(5, "    Target : ENB_UE_S1AP_ID[%d] MME_UE_S1AP_ID[%d]\n",
             target_ue->enb_ue_s1ap_id, target_ue->mme_ue_s1ap_id);
 
-    for (i = 0; i < ies->e_RABAdmittedList.s1ap_E_RABAdmittedItem.count; i++)
+    for (i = 0; i < ies->e_RABAdmittedList.s1AP_E_RABAdmittedItem.count; i++)
     {
         mme_bearer_t *bearer = NULL;
-        S1ap_E_RABAdmittedItem_t *e_rab = NULL;
+        S1AP_E_RABAdmittedItem_t *e_rab = NULL;
 
-        e_rab = (S1ap_E_RABAdmittedItem_t *)ies->e_RABAdmittedList.
-            s1ap_E_RABAdmittedItem.array[i];
+        e_rab = (S1AP_E_RABAdmittedItem_t *)ies->e_RABAdmittedList.
+            s1AP_E_RABAdmittedItem.array[i];
         d_assert(e_rab, return, "Null param");
 
         bearer = mme_bearer_find_by_ue_ebi(mme_ue, e_rab->e_RAB_ID);
@@ -1064,15 +1064,15 @@ void s1ap_handle_handover_request_ack(mme_enb_t *enb, s1ap_message_t *message)
             d_assert(rv == CORE_OK, return,);
         }
 
-        if (e_rab->uL_S1ap_TransportLayerAddress && e_rab->uL_S1ap_GTP_TEID)
+        if (e_rab->uL_S1AP_TransportLayerAddress && e_rab->uL_S1AP_GTP_TEID)
         {
-            d_assert(e_rab->uL_S1ap_GTP_TEID->buf, return,);
-            d_assert(e_rab->uL_S1ap_TransportLayerAddress->buf, return,);
-            memcpy(&bearer->enb_ul_teid, e_rab->uL_S1ap_GTP_TEID->buf, 
+            d_assert(e_rab->uL_S1AP_GTP_TEID->buf, return,);
+            d_assert(e_rab->uL_S1AP_TransportLayerAddress->buf, return,);
+            memcpy(&bearer->enb_ul_teid, e_rab->uL_S1AP_GTP_TEID->buf, 
                     sizeof(bearer->enb_ul_teid));
             bearer->enb_ul_teid = ntohl(bearer->enb_ul_teid);
             rv = s1ap_BIT_STRING_to_ip(
-                    e_rab->uL_S1ap_TransportLayerAddress, &bearer->enb_ul_ip);
+                    e_rab->uL_S1AP_TransportLayerAddress, &bearer->enb_ul_ip);
             d_assert(rv == CORE_OK, return,);
         }
     }
@@ -1098,13 +1098,13 @@ void s1ap_handle_handover_failure(mme_enb_t *enb, s1ap_message_t *message)
     status_t rv;
     char buf[CORE_ADDRSTRLEN];
 
-    S1ap_HandoverFailureIEs_t *ies = NULL;
+    S1AP_HandoverFailureIEs_t *ies = NULL;
     enb_ue_t *target_ue = NULL;
     enb_ue_t *source_ue = NULL;
 
     d_assert(enb, return,);
 
-    ies = &message->s1ap_HandoverFailureIEs;
+    ies = &message->s1AP_HandoverFailureIEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] Handover failure\n");
@@ -1129,8 +1129,8 @@ void s1ap_handle_handover_failure(mme_enb_t *enb, s1ap_message_t *message)
     d_assert(rv == CORE_OK, return, "s1ap send error");
 
     rv = s1ap_send_ue_context_release_command(
-        target_ue, S1ap_Cause_PR_radioNetwork,
-        S1ap_CauseRadioNetwork_ho_failure_in_target_EPC_eNB_or_target_system,
+        target_ue, S1AP_Cause_PR_radioNetwork,
+        S1AP_CauseRadioNetwork_ho_failure_in_target_EPC_eNB_or_target_system,
         S1AP_UE_CTX_REL_DELETE_INDIRECT_TUNNEL, 0);
     d_assert(rv == CORE_OK, return, "s1ap send error");
 }
@@ -1143,11 +1143,11 @@ void s1ap_handle_handover_cancel(mme_enb_t *enb, s1ap_message_t *message)
     enb_ue_t *source_ue = NULL;
     enb_ue_t *target_ue = NULL;
 
-    S1ap_HandoverCancelIEs_t *ies = NULL;
+    S1AP_HandoverCancelIEs_t *ies = NULL;
 
     d_assert(enb, return,);
 
-    ies = &message->s1ap_HandoverCancelIEs;
+    ies = &message->s1AP_HandoverCancelIEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] Handover cancel\n");
@@ -1175,8 +1175,8 @@ void s1ap_handle_handover_cancel(mme_enb_t *enb, s1ap_message_t *message)
     d_assert(rv == CORE_OK,, "s1ap send error");
 
     rv = s1ap_send_ue_context_release_command(
-            target_ue, S1ap_Cause_PR_radioNetwork,
-            S1ap_CauseRadioNetwork_handover_cancelled,
+            target_ue, S1AP_Cause_PR_radioNetwork,
+            S1AP_CauseRadioNetwork_handover_cancelled,
             S1AP_UE_CTX_REL_DELETE_INDIRECT_TUNNEL, 300);
     d_assert(rv == CORE_OK, return, "s1ap send error");
 
@@ -1193,11 +1193,11 @@ void s1ap_handle_enb_status_transfer(mme_enb_t *enb, s1ap_message_t *message)
 
     enb_ue_t *source_ue = NULL, *target_ue = NULL;
 
-    S1ap_ENBStatusTransferIEs_t *ies = NULL;
+    S1AP_ENBStatusTransferIEs_t *ies = NULL;
 
     d_assert(enb, return,);
 
-    ies = &message->s1ap_ENBStatusTransferIEs;
+    ies = &message->s1AP_ENBStatusTransferIEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] ENB status transfer\n");
@@ -1236,16 +1236,16 @@ void s1ap_handle_handover_notification(mme_enb_t *enb, s1ap_message_t *message)
     mme_sess_t *sess = NULL;
     mme_bearer_t *bearer = NULL;
 
-    S1ap_HandoverNotifyIEs_t *ies = NULL;
-    S1ap_EUTRAN_CGI_t *eutran_cgi;
-	S1ap_PLMNidentity_t *pLMNidentity = NULL;
-	S1ap_CellIdentity_t	*cell_ID = NULL;
-    S1ap_TAI_t *tai;
-	S1ap_TAC_t *tAC = NULL;
+    S1AP_HandoverNotifyIEs_t *ies = NULL;
+    S1AP_EUTRAN_CGI_t *eutran_cgi;
+	S1AP_PLMNidentity_t *pLMNidentity = NULL;
+	S1AP_CellIdentity_t	*cell_ID = NULL;
+    S1AP_TAI_t *tai;
+	S1AP_TAC_t *tAC = NULL;
 
     d_assert(enb, return,);
 
-    ies = &message->s1ap_HandoverNotifyIEs;
+    ies = &message->s1AP_HandoverNotifyIEs;
     d_assert(ies, return,);
 
     d_trace(3, "[MME] Handover notification\n");

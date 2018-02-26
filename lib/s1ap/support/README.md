@@ -23,8 +23,9 @@ user@host ~/Documents/git/nextepc/lib/s1ap/asn1c$ \
 
 * Remove unnecessary files
 user@host ~/Documents/git/nextepc/lib/s1ap/s1ap/asn1c$ \
-git rm E-RAB-IE-ContainerPairList.c ProtocolError-IE-ContainerList.c \
-ProtocolIE-ContainerPair.c ProtocolIE-FieldPair.c ProtocolIE-ContainerPairList.c
+    rm E-RAB-IE-ContainerPairList.c ProtocolError-IE-ContainerList.c \
+       ProtocolIE-ContainerPair.c ProtocolIE-FieldPair.c \
+       ProtocolIE-ContainerPairList.c
 
 user@host ~/Documents/git/nextepc/lib/s1ap/s1ap/asn1c$ \
     vi Makefile.am

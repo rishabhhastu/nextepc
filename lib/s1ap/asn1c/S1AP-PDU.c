@@ -16,7 +16,7 @@ static asn_TYPE_member_t asn_MBR_S1AP_PDU_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct S1AP_PDU, choice.initiatingMessage),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_InitiatingMessage,
+		&asn_DEF_S1AP_InitiatingMessage,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* No PER visible constraints */
 		0,
@@ -25,7 +25,7 @@ static asn_TYPE_member_t asn_MBR_S1AP_PDU_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct S1AP_PDU, choice.successfulOutcome),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_SuccessfulOutcome,
+		&asn_DEF_S1AP_SuccessfulOutcome,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* No PER visible constraints */
 		0,
@@ -34,7 +34,7 @@ static asn_TYPE_member_t asn_MBR_S1AP_PDU_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct S1AP_PDU, choice.unsuccessfulOutcome),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_UnsuccessfulOutcome,
+		&asn_DEF_S1AP_UnsuccessfulOutcome,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* No PER visible constraints */
 		0,

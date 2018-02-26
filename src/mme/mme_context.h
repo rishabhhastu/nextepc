@@ -159,7 +159,7 @@ struct _enb_ue_t {
     c_uint32_t      mme_ue_s1ap_id; /* MME-UE-S1AP-ID received from MME */
 
     /* Handover Info */
-    S1ap_HandoverType_t handover_type;
+    S1AP_HandoverType_t handover_type;
     enb_ue_t        *source_ue;
     enb_ue_t        *target_ue;
 

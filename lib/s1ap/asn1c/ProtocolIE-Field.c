@@ -5627,7 +5627,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P0_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P0, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_1,
 		&asn_PER_memb_id_constr_2,
 		0,
@@ -5636,7 +5636,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P0_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P0, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_1,
 		&asn_PER_memb_criticality_constr_3,
 		0,
@@ -5700,7 +5700,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P1_5[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P1, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_5,
 		&asn_PER_memb_id_constr_6,
 		0,
@@ -5709,7 +5709,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P1_5[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P1, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_5,
 		&asn_PER_memb_criticality_constr_7,
 		0,
@@ -5773,7 +5773,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P2_9[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P2, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_9,
 		&asn_PER_memb_id_constr_10,
 		0,
@@ -5782,7 +5782,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P2_9[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P2, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_9,
 		&asn_PER_memb_criticality_constr_11,
 		0,
@@ -5846,7 +5846,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P3_13[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P3, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_13,
 		&asn_PER_memb_id_constr_14,
 		0,
@@ -5855,7 +5855,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P3_13[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P3, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_13,
 		&asn_PER_memb_criticality_constr_15,
 		0,
@@ -5919,7 +5919,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P4_17[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P4, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_17,
 		&asn_PER_memb_id_constr_18,
 		0,
@@ -5928,7 +5928,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P4_17[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P4, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_17,
 		&asn_PER_memb_criticality_constr_19,
 		0,
@@ -5992,7 +5992,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P5_21[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P5, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_21,
 		&asn_PER_memb_id_constr_22,
 		0,
@@ -6001,7 +6001,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P5_21[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P5, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_21,
 		&asn_PER_memb_criticality_constr_23,
 		0,
@@ -6065,7 +6065,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P6_25[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P6, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_25,
 		&asn_PER_memb_id_constr_26,
 		0,
@@ -6074,7 +6074,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P6_25[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P6, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_25,
 		&asn_PER_memb_criticality_constr_27,
 		0,
@@ -6138,7 +6138,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P7_29[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P7, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_29,
 		&asn_PER_memb_id_constr_30,
 		0,
@@ -6147,7 +6147,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P7_29[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P7, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_29,
 		&asn_PER_memb_criticality_constr_31,
 		0,
@@ -6211,7 +6211,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P8_33[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P8, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_33,
 		&asn_PER_memb_id_constr_34,
 		0,
@@ -6220,7 +6220,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P8_33[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P8, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_33,
 		&asn_PER_memb_criticality_constr_35,
 		0,
@@ -6284,7 +6284,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P9_37[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P9, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_37,
 		&asn_PER_memb_id_constr_38,
 		0,
@@ -6293,7 +6293,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P9_37[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P9, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_37,
 		&asn_PER_memb_criticality_constr_39,
 		0,
@@ -6357,7 +6357,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P10_41[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P10, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_41,
 		&asn_PER_memb_id_constr_42,
 		0,
@@ -6366,7 +6366,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P10_41[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P10, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_41,
 		&asn_PER_memb_criticality_constr_43,
 		0,
@@ -6430,7 +6430,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P11_45[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P11, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_45,
 		&asn_PER_memb_id_constr_46,
 		0,
@@ -6439,7 +6439,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P11_45[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P11, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_45,
 		&asn_PER_memb_criticality_constr_47,
 		0,
@@ -6503,7 +6503,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P12_49[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P12, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_49,
 		&asn_PER_memb_id_constr_50,
 		0,
@@ -6512,7 +6512,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P12_49[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P12, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_49,
 		&asn_PER_memb_criticality_constr_51,
 		0,
@@ -6576,7 +6576,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P13_53[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P13, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_53,
 		&asn_PER_memb_id_constr_54,
 		0,
@@ -6585,7 +6585,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P13_53[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P13, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_53,
 		&asn_PER_memb_criticality_constr_55,
 		0,
@@ -6649,7 +6649,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P14_57[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P14, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_57,
 		&asn_PER_memb_id_constr_58,
 		0,
@@ -6658,7 +6658,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P14_57[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P14, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_57,
 		&asn_PER_memb_criticality_constr_59,
 		0,
@@ -6722,7 +6722,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P15_61[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P15, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_61,
 		&asn_PER_memb_id_constr_62,
 		0,
@@ -6731,7 +6731,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P15_61[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P15, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_61,
 		&asn_PER_memb_criticality_constr_63,
 		0,
@@ -6795,7 +6795,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P16_65[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P16, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_65,
 		&asn_PER_memb_id_constr_66,
 		0,
@@ -6804,7 +6804,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P16_65[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P16, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_65,
 		&asn_PER_memb_criticality_constr_67,
 		0,
@@ -6868,7 +6868,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P17_69[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P17, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_69,
 		&asn_PER_memb_id_constr_70,
 		0,
@@ -6877,7 +6877,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P17_69[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P17, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_69,
 		&asn_PER_memb_criticality_constr_71,
 		0,
@@ -6941,7 +6941,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P18_73[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P18, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_73,
 		&asn_PER_memb_id_constr_74,
 		0,
@@ -6950,7 +6950,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P18_73[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P18, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_73,
 		&asn_PER_memb_criticality_constr_75,
 		0,
@@ -7014,7 +7014,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P19_77[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P19, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_77,
 		&asn_PER_memb_id_constr_78,
 		0,
@@ -7023,7 +7023,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P19_77[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P19, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_77,
 		&asn_PER_memb_criticality_constr_79,
 		0,
@@ -7087,7 +7087,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P20_81[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P20, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_81,
 		&asn_PER_memb_id_constr_82,
 		0,
@@ -7096,7 +7096,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P20_81[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P20, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_81,
 		&asn_PER_memb_criticality_constr_83,
 		0,
@@ -7160,7 +7160,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P21_85[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P21, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_85,
 		&asn_PER_memb_id_constr_86,
 		0,
@@ -7169,7 +7169,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P21_85[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P21, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_85,
 		&asn_PER_memb_criticality_constr_87,
 		0,
@@ -7233,7 +7233,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P22_89[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P22, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_89,
 		&asn_PER_memb_id_constr_90,
 		0,
@@ -7242,7 +7242,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P22_89[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P22, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_89,
 		&asn_PER_memb_criticality_constr_91,
 		0,
@@ -7306,7 +7306,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P23_93[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P23, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_93,
 		&asn_PER_memb_id_constr_94,
 		0,
@@ -7315,7 +7315,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P23_93[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P23, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_93,
 		&asn_PER_memb_criticality_constr_95,
 		0,
@@ -7379,7 +7379,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P24_97[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P24, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_97,
 		&asn_PER_memb_id_constr_98,
 		0,
@@ -7388,7 +7388,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P24_97[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P24, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_97,
 		&asn_PER_memb_criticality_constr_99,
 		0,
@@ -7452,7 +7452,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P25_101[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P25, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_101,
 		&asn_PER_memb_id_constr_102,
 		0,
@@ -7461,7 +7461,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P25_101[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P25, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_101,
 		&asn_PER_memb_criticality_constr_103,
 		0,
@@ -7525,7 +7525,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P26_105[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P26, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_105,
 		&asn_PER_memb_id_constr_106,
 		0,
@@ -7534,7 +7534,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P26_105[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P26, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_105,
 		&asn_PER_memb_criticality_constr_107,
 		0,
@@ -7598,7 +7598,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P27_109[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P27, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_109,
 		&asn_PER_memb_id_constr_110,
 		0,
@@ -7607,7 +7607,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P27_109[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P27, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_109,
 		&asn_PER_memb_criticality_constr_111,
 		0,
@@ -7671,7 +7671,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P28_113[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P28, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_113,
 		&asn_PER_memb_id_constr_114,
 		0,
@@ -7680,7 +7680,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P28_113[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P28, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_113,
 		&asn_PER_memb_criticality_constr_115,
 		0,
@@ -7744,7 +7744,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P29_117[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P29, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_117,
 		&asn_PER_memb_id_constr_118,
 		0,
@@ -7753,7 +7753,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P29_117[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P29, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_117,
 		&asn_PER_memb_criticality_constr_119,
 		0,
@@ -7817,7 +7817,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P30_121[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P30, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_121,
 		&asn_PER_memb_id_constr_122,
 		0,
@@ -7826,7 +7826,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P30_121[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P30, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_121,
 		&asn_PER_memb_criticality_constr_123,
 		0,
@@ -7890,7 +7890,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P31_125[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P31, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_125,
 		&asn_PER_memb_id_constr_126,
 		0,
@@ -7899,7 +7899,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P31_125[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P31, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_125,
 		&asn_PER_memb_criticality_constr_127,
 		0,
@@ -7963,7 +7963,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P32_129[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P32, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_129,
 		&asn_PER_memb_id_constr_130,
 		0,
@@ -7972,7 +7972,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P32_129[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P32, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_129,
 		&asn_PER_memb_criticality_constr_131,
 		0,
@@ -8036,7 +8036,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P33_133[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P33, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_133,
 		&asn_PER_memb_id_constr_134,
 		0,
@@ -8045,7 +8045,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P33_133[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P33, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_133,
 		&asn_PER_memb_criticality_constr_135,
 		0,
@@ -8109,7 +8109,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P34_137[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P34, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_137,
 		&asn_PER_memb_id_constr_138,
 		0,
@@ -8118,7 +8118,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P34_137[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P34, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_137,
 		&asn_PER_memb_criticality_constr_139,
 		0,
@@ -8182,7 +8182,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P35_141[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P35, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_141,
 		&asn_PER_memb_id_constr_142,
 		0,
@@ -8191,7 +8191,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P35_141[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P35, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_141,
 		&asn_PER_memb_criticality_constr_143,
 		0,
@@ -8255,7 +8255,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P36_145[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P36, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_145,
 		&asn_PER_memb_id_constr_146,
 		0,
@@ -8264,7 +8264,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P36_145[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P36, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_145,
 		&asn_PER_memb_criticality_constr_147,
 		0,
@@ -8328,7 +8328,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P37_149[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P37, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_149,
 		&asn_PER_memb_id_constr_150,
 		0,
@@ -8337,7 +8337,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P37_149[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P37, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_149,
 		&asn_PER_memb_criticality_constr_151,
 		0,
@@ -8401,7 +8401,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P38_153[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P38, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_153,
 		&asn_PER_memb_id_constr_154,
 		0,
@@ -8410,7 +8410,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P38_153[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P38, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_153,
 		&asn_PER_memb_criticality_constr_155,
 		0,
@@ -8474,7 +8474,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P39_157[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P39, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_157,
 		&asn_PER_memb_id_constr_158,
 		0,
@@ -8483,7 +8483,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P39_157[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P39, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_157,
 		&asn_PER_memb_criticality_constr_159,
 		0,
@@ -8547,7 +8547,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P40_161[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P40, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_161,
 		&asn_PER_memb_id_constr_162,
 		0,
@@ -8556,7 +8556,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P40_161[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P40, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_161,
 		&asn_PER_memb_criticality_constr_163,
 		0,
@@ -8620,7 +8620,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P41_165[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P41, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_165,
 		&asn_PER_memb_id_constr_166,
 		0,
@@ -8629,7 +8629,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P41_165[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P41, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_165,
 		&asn_PER_memb_criticality_constr_167,
 		0,
@@ -8693,7 +8693,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P42_169[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P42, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_169,
 		&asn_PER_memb_id_constr_170,
 		0,
@@ -8702,7 +8702,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P42_169[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P42, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_169,
 		&asn_PER_memb_criticality_constr_171,
 		0,
@@ -8766,7 +8766,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P43_173[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P43, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_173,
 		&asn_PER_memb_id_constr_174,
 		0,
@@ -8775,7 +8775,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P43_173[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P43, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_173,
 		&asn_PER_memb_criticality_constr_175,
 		0,
@@ -8839,7 +8839,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P44_177[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P44, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_177,
 		&asn_PER_memb_id_constr_178,
 		0,
@@ -8848,7 +8848,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P44_177[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P44, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_177,
 		&asn_PER_memb_criticality_constr_179,
 		0,
@@ -8912,7 +8912,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P45_181[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P45, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_181,
 		&asn_PER_memb_id_constr_182,
 		0,
@@ -8921,7 +8921,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P45_181[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P45, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_181,
 		&asn_PER_memb_criticality_constr_183,
 		0,
@@ -8985,7 +8985,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P46_185[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P46, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_185,
 		&asn_PER_memb_id_constr_186,
 		0,
@@ -8994,7 +8994,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P46_185[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P46, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_185,
 		&asn_PER_memb_criticality_constr_187,
 		0,
@@ -9058,7 +9058,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P47_189[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P47, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_189,
 		&asn_PER_memb_id_constr_190,
 		0,
@@ -9067,7 +9067,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P47_189[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P47, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_189,
 		&asn_PER_memb_criticality_constr_191,
 		0,
@@ -9131,7 +9131,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P48_193[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P48, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_193,
 		&asn_PER_memb_id_constr_194,
 		0,
@@ -9140,7 +9140,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P48_193[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P48, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_193,
 		&asn_PER_memb_criticality_constr_195,
 		0,
@@ -9204,7 +9204,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P49_197[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P49, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_197,
 		&asn_PER_memb_id_constr_198,
 		0,
@@ -9213,7 +9213,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P49_197[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P49, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_197,
 		&asn_PER_memb_criticality_constr_199,
 		0,
@@ -9277,7 +9277,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P50_201[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P50, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_201,
 		&asn_PER_memb_id_constr_202,
 		0,
@@ -9286,7 +9286,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P50_201[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P50, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_201,
 		&asn_PER_memb_criticality_constr_203,
 		0,
@@ -9350,7 +9350,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P51_205[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P51, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_205,
 		&asn_PER_memb_id_constr_206,
 		0,
@@ -9359,7 +9359,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P51_205[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P51, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_205,
 		&asn_PER_memb_criticality_constr_207,
 		0,
@@ -9423,7 +9423,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P52_209[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P52, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_209,
 		&asn_PER_memb_id_constr_210,
 		0,
@@ -9432,7 +9432,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P52_209[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P52, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_209,
 		&asn_PER_memb_criticality_constr_211,
 		0,
@@ -9496,7 +9496,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P53_213[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P53, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_213,
 		&asn_PER_memb_id_constr_214,
 		0,
@@ -9505,7 +9505,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P53_213[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P53, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_213,
 		&asn_PER_memb_criticality_constr_215,
 		0,
@@ -9569,7 +9569,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P54_217[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P54, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_217,
 		&asn_PER_memb_id_constr_218,
 		0,
@@ -9578,7 +9578,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P54_217[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P54, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_217,
 		&asn_PER_memb_criticality_constr_219,
 		0,
@@ -9642,7 +9642,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P55_221[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P55, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_221,
 		&asn_PER_memb_id_constr_222,
 		0,
@@ -9651,7 +9651,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P55_221[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P55, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_221,
 		&asn_PER_memb_criticality_constr_223,
 		0,
@@ -9715,7 +9715,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P56_225[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P56, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_225,
 		&asn_PER_memb_id_constr_226,
 		0,
@@ -9724,7 +9724,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P56_225[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P56, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_225,
 		&asn_PER_memb_criticality_constr_227,
 		0,
@@ -9788,7 +9788,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P57_229[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P57, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_229,
 		&asn_PER_memb_id_constr_230,
 		0,
@@ -9797,7 +9797,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P57_229[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P57, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_229,
 		&asn_PER_memb_criticality_constr_231,
 		0,
@@ -9861,7 +9861,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P58_233[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P58, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_233,
 		&asn_PER_memb_id_constr_234,
 		0,
@@ -9870,7 +9870,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P58_233[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P58, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_233,
 		&asn_PER_memb_criticality_constr_235,
 		0,
@@ -9934,7 +9934,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P59_237[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P59, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_237,
 		&asn_PER_memb_id_constr_238,
 		0,
@@ -9943,7 +9943,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P59_237[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P59, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_237,
 		&asn_PER_memb_criticality_constr_239,
 		0,
@@ -10007,7 +10007,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P60_241[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P60, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_241,
 		&asn_PER_memb_id_constr_242,
 		0,
@@ -10016,7 +10016,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P60_241[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P60, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_241,
 		&asn_PER_memb_criticality_constr_243,
 		0,
@@ -10080,7 +10080,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P61_245[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P61, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_245,
 		&asn_PER_memb_id_constr_246,
 		0,
@@ -10089,7 +10089,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P61_245[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P61, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_245,
 		&asn_PER_memb_criticality_constr_247,
 		0,
@@ -10153,7 +10153,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P62_249[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P62, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_249,
 		&asn_PER_memb_id_constr_250,
 		0,
@@ -10162,7 +10162,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P62_249[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P62, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_249,
 		&asn_PER_memb_criticality_constr_251,
 		0,
@@ -10226,7 +10226,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P63_253[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P63, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_253,
 		&asn_PER_memb_id_constr_254,
 		0,
@@ -10235,7 +10235,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P63_253[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P63, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_253,
 		&asn_PER_memb_criticality_constr_255,
 		0,
@@ -10299,7 +10299,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P64_257[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P64, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_257,
 		&asn_PER_memb_id_constr_258,
 		0,
@@ -10308,7 +10308,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P64_257[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P64, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_257,
 		&asn_PER_memb_criticality_constr_259,
 		0,
@@ -10372,7 +10372,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P65_261[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P65, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_261,
 		&asn_PER_memb_id_constr_262,
 		0,
@@ -10381,7 +10381,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P65_261[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P65, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_261,
 		&asn_PER_memb_criticality_constr_263,
 		0,
@@ -10445,7 +10445,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P66_265[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P66, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_265,
 		&asn_PER_memb_id_constr_266,
 		0,
@@ -10454,7 +10454,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P66_265[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P66, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_265,
 		&asn_PER_memb_criticality_constr_267,
 		0,
@@ -10518,7 +10518,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P67_269[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P67, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_269,
 		&asn_PER_memb_id_constr_270,
 		0,
@@ -10527,7 +10527,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P67_269[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P67, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_269,
 		&asn_PER_memb_criticality_constr_271,
 		0,
@@ -10591,7 +10591,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P68_273[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P68, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_273,
 		&asn_PER_memb_id_constr_274,
 		0,
@@ -10600,7 +10600,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P68_273[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P68, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_273,
 		&asn_PER_memb_criticality_constr_275,
 		0,
@@ -10664,7 +10664,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P69_277[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P69, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_277,
 		&asn_PER_memb_id_constr_278,
 		0,
@@ -10673,7 +10673,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P69_277[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P69, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_277,
 		&asn_PER_memb_criticality_constr_279,
 		0,
@@ -10737,7 +10737,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P70_281[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P70, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_281,
 		&asn_PER_memb_id_constr_282,
 		0,
@@ -10746,7 +10746,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P70_281[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P70, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_281,
 		&asn_PER_memb_criticality_constr_283,
 		0,
@@ -10810,7 +10810,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P71_285[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P71, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_ProtocolIE_ID,
+		&asn_DEF_S1AP_ProtocolIE_ID,
 		memb_id_constraint_285,
 		&asn_PER_memb_id_constr_286,
 		0,
@@ -10819,7 +10819,7 @@ static asn_TYPE_member_t asn_MBR_ProtocolIE_Field_5911P71_285[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ProtocolIE_Field_5911P71, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_285,
 		&asn_PER_memb_criticality_constr_287,
 		0,

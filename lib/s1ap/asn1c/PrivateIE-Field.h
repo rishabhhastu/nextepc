@@ -12,8 +12,8 @@
 #include "asn_application.h"
 
 /* Including external dependencies */
-#include "S1ap-PrivateIE-ID.h"
-#include "S1ap-Criticality.h"
+#include "S1AP-PrivateIE-ID.h"
+#include "S1AP-Criticality.h"
 #include "ANY.h"
 #include "constr_SEQUENCE.h"
 
@@ -23,8 +23,8 @@ extern "C" {
 
 /* PrivateIE-Field */
 typedef struct PrivateIE_Field_5987P0 {
-	S1ap_PrivateIE_ID_t	 id;
-	S1ap_Criticality_t	 criticality;
+	S1AP_PrivateIE_ID_t	 id;
+	S1AP_Criticality_t	 criticality;
 	ANY_t	 value;
 	
 	/* Context for parsing across buffer boundaries */

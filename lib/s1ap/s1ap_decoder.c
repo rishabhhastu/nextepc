@@ -5,11 +5,11 @@
 #include "s1ap_message.h"
 
 static int s1ap_decode_initiating(s1ap_message_t *message,
-    S1ap_InitiatingMessage_t *initiating_p);
+    S1AP_InitiatingMessage_t *initiating_p);
 static int s1ap_decode_successfull_outcome(s1ap_message_t *message,
-    S1ap_SuccessfulOutcome_t *successfullOutcome_p);
+    S1AP_SuccessfulOutcome_t *successfullOutcome_p);
 static int s1ap_decode_unsuccessfull_outcome(s1ap_message_t *message,
-    S1ap_UnsuccessfulOutcome_t *unSuccessfulOutcome_p);
+    S1AP_UnsuccessfulOutcome_t *unSuccessfulOutcome_p);
 
 static void s1ap_decode_xer_print_message(
     asn_enc_rval_t (*func)(asn_app_consume_bytes_f *cb,
@@ -69,7 +69,7 @@ int s1ap_decode_pdu(s1ap_message_t *message, pkbuf_t *pkb)
 
 
 static int s1ap_decode_initiating(s1ap_message_t *message,
-    S1ap_InitiatingMessage_t *initiating_p)
+    S1AP_InitiatingMessage_t *initiating_p)
 {
     int ret = -1;
 
@@ -78,103 +78,103 @@ static int s1ap_decode_initiating(s1ap_message_t *message,
     message->procedureCode = initiating_p->procedureCode;
     switch (initiating_p->procedureCode) 
     {
-        case S1ap_ProcedureCode_id_S1Setup: 
+        case S1AP_ProcedureCode_id_S1Setup: 
             ret = s1ap_decode_s1ap_s1setuprequesties(
-                    &message->s1ap_S1SetupRequestIEs, 
+                    &message->s1AP_S1SetupRequestIEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_s1setuprequest,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_initialUEMessage: 
+        case S1AP_ProcedureCode_id_initialUEMessage: 
             ret = s1ap_decode_s1ap_initialuemessage_ies(
-                    &message->s1ap_InitialUEMessage_IEs, 
+                    &message->s1AP_InitialUEMessage_IEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_initialuemessage,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_uplinkNASTransport: 
+        case S1AP_ProcedureCode_id_uplinkNASTransport: 
             ret = s1ap_decode_s1ap_uplinknastransport_ies(
-                    &message->s1ap_UplinkNASTransport_IEs, 
+                    &message->s1AP_UplinkNASTransport_IEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_uplinknastransport, 
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_UECapabilityInfoIndication: 
+        case S1AP_ProcedureCode_id_UECapabilityInfoIndication: 
             ret = s1ap_decode_s1ap_uecapabilityinfoindicationies(
-                    &message->s1ap_UECapabilityInfoIndicationIEs, 
+                    &message->s1AP_UECapabilityInfoIndicationIEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_uecapabilityinfoindication,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_UEContextReleaseRequest: 
+        case S1AP_ProcedureCode_id_UEContextReleaseRequest: 
             ret = s1ap_decode_s1ap_uecontextreleaserequest_ies(
-                    &message->s1ap_UEContextReleaseRequest_IEs,
+                    &message->s1AP_UEContextReleaseRequest_IEs,
                     &initiating_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_uecontextreleaserequest,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_PathSwitchRequest:
+        case S1AP_ProcedureCode_id_PathSwitchRequest:
             ret = s1ap_decode_s1ap_pathswitchrequesties(
-                    &message->s1ap_PathSwitchRequestIEs, &initiating_p->value);
+                    &message->s1AP_PathSwitchRequestIEs, &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_pathswitchrequest,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_HandoverPreparation:
+        case S1AP_ProcedureCode_id_HandoverPreparation:
             ret = s1ap_decode_s1ap_handoverrequiredies(
-                    &message->s1ap_HandoverRequiredIEs, &initiating_p->value);
+                    &message->s1AP_HandoverRequiredIEs, &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_handoverrequired,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_HandoverCancel:
+        case S1AP_ProcedureCode_id_HandoverCancel:
             ret = s1ap_decode_s1ap_handovercancelies(
-                    &message->s1ap_HandoverCancelIEs, &initiating_p->value);
+                    &message->s1AP_HandoverCancelIEs, &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_handovercancel,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_eNBStatusTransfer:
+        case S1AP_ProcedureCode_id_eNBStatusTransfer:
             ret = s1ap_decode_s1ap_enbstatustransferies(
-                    &message->s1ap_ENBStatusTransferIEs, &initiating_p->value);
+                    &message->s1AP_ENBStatusTransferIEs, &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_enbstatustransfer,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_HandoverNotification:
+        case S1AP_ProcedureCode_id_HandoverNotification:
             ret = s1ap_decode_s1ap_handovernotifyies(
-                    &message->s1ap_HandoverNotifyIEs, &initiating_p->value);
+                    &message->s1AP_HandoverNotifyIEs, &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_handovernotify,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_NASNonDeliveryIndication: 
+        case S1AP_ProcedureCode_id_NASNonDeliveryIndication: 
             ret = s1ap_decode_s1ap_nasnondeliveryindication_ies(
-                    &message->s1ap_NASNonDeliveryIndication_IEs, 
+                    &message->s1AP_NASNonDeliveryIndication_IEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(s1ap_xer_print_s1ap_nasnondeliveryindication,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_ErrorIndication: 
+        case S1AP_ProcedureCode_id_ErrorIndication: 
             ret = s1ap_decode_s1ap_errorindicationies(
-                    &message->s1ap_ErrorIndicationIEs, 
+                    &message->s1AP_ErrorIndicationIEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_errorindication,
                     s1ap_xer__print2sp, message);
             break;
-        case S1ap_ProcedureCode_id_Reset: 
+        case S1AP_ProcedureCode_id_Reset: 
             ret = s1ap_decode_s1ap_reseties(
-                    &message->s1ap_ResetIEs, 
+                    &message->s1AP_ResetIEs, 
                     &initiating_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_reset,
@@ -190,7 +190,7 @@ static int s1ap_decode_initiating(s1ap_message_t *message,
 }
 
 static int s1ap_decode_successfull_outcome(s1ap_message_t *message,
-    S1ap_SuccessfulOutcome_t *successfullOutcome_p) 
+    S1AP_SuccessfulOutcome_t *successfullOutcome_p) 
 {
     int ret = -1;
 
@@ -199,72 +199,72 @@ static int s1ap_decode_successfull_outcome(s1ap_message_t *message,
     message->procedureCode = successfullOutcome_p->procedureCode;
     switch (successfullOutcome_p->procedureCode) 
     {
-        case S1ap_ProcedureCode_id_S1Setup: 
+        case S1AP_ProcedureCode_id_S1Setup: 
             ret = s1ap_decode_s1ap_s1setupresponseies(
-                    &message->s1ap_S1SetupResponseIEs, 
+                    &message->s1AP_S1SetupResponseIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_s1setupresponse,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_InitialContextSetup: 
+        case S1AP_ProcedureCode_id_InitialContextSetup: 
             ret = s1ap_decode_s1ap_initialcontextsetupresponseies(
-                    &message->s1ap_InitialContextSetupResponseIEs, 
+                    &message->s1AP_InitialContextSetupResponseIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_initialcontextsetupresponse,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_E_RABSetup: 
+        case S1AP_ProcedureCode_id_E_RABSetup: 
             ret = s1ap_decode_s1ap_e_rabsetupresponseies(
-                    &message->s1ap_E_RABSetupResponseIEs, 
+                    &message->s1AP_E_RABSetupResponseIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_e_rabsetupresponse,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_E_RABModify: 
+        case S1AP_ProcedureCode_id_E_RABModify: 
             ret = s1ap_decode_s1ap_e_rabmodifyresponseies(
-                    &message->s1ap_E_RABModifyResponseIEs, 
+                    &message->s1AP_E_RABModifyResponseIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_e_rabmodifyresponse,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_E_RABRelease: 
+        case S1AP_ProcedureCode_id_E_RABRelease: 
             ret = s1ap_decode_s1ap_e_rabreleaseresponseies(
-                    &message->s1ap_E_RABReleaseResponseIEs, 
+                    &message->s1AP_E_RABReleaseResponseIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_e_rabreleaseresponse,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_UEContextRelease: 
+        case S1AP_ProcedureCode_id_UEContextRelease: 
             ret = s1ap_decode_s1ap_uecontextreleasecomplete_ies(
-                    &message->s1ap_UEContextReleaseComplete_IEs, 
+                    &message->s1AP_UEContextReleaseComplete_IEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_uecontextreleasecomplete,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_HandoverResourceAllocation: 
+        case S1AP_ProcedureCode_id_HandoverResourceAllocation: 
             ret = s1ap_decode_s1ap_handoverrequestacknowledgeies(
-                    &message->s1ap_HandoverRequestAcknowledgeIEs, 
+                    &message->s1AP_HandoverRequestAcknowledgeIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_handoverrequestacknowledge,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_Reset: 
+        case S1AP_ProcedureCode_id_Reset: 
             ret = s1ap_decode_s1ap_resetacknowledgeies(
-                    &message->s1ap_ResetAcknowledgeIEs, 
+                    &message->s1AP_ResetAcknowledgeIEs, 
                     &successfullOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_resetacknowledge,
@@ -281,7 +281,7 @@ static int s1ap_decode_successfull_outcome(s1ap_message_t *message,
 }
 
 static int s1ap_decode_unsuccessfull_outcome(s1ap_message_t *message,
-    S1ap_UnsuccessfulOutcome_t *unSuccessfulOutcome_p) 
+    S1AP_UnsuccessfulOutcome_t *unSuccessfulOutcome_p) 
 {
     int ret = -1;
 
@@ -290,27 +290,27 @@ static int s1ap_decode_unsuccessfull_outcome(s1ap_message_t *message,
     message->procedureCode = unSuccessfulOutcome_p->procedureCode;
     switch (unSuccessfulOutcome_p->procedureCode) 
     {
-        case S1ap_ProcedureCode_id_S1Setup: 
+        case S1AP_ProcedureCode_id_S1Setup: 
             ret = s1ap_decode_s1ap_s1setupfailureies(
-                    &message->s1ap_S1SetupFailureIEs, 
+                    &message->s1AP_S1SetupFailureIEs, 
                     &unSuccessfulOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_s1setupfailure,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_InitialContextSetup: 
+        case S1AP_ProcedureCode_id_InitialContextSetup: 
             ret = s1ap_decode_s1ap_initialcontextsetupfailureies(
-                    &message->s1ap_InitialContextSetupFailureIEs, 
+                    &message->s1AP_InitialContextSetupFailureIEs, 
                     &unSuccessfulOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_initialcontextsetupfailure,
                     s1ap_xer__print2sp, message);
             break;
 
-        case S1ap_ProcedureCode_id_HandoverResourceAllocation: 
+        case S1AP_ProcedureCode_id_HandoverResourceAllocation: 
             ret = s1ap_decode_s1ap_handoverfailureies(
-                    &message->s1ap_HandoverFailureIEs, 
+                    &message->s1AP_HandoverFailureIEs, 
                     &unSuccessfulOutcome_p->value);
             s1ap_decode_xer_print_message(
                     s1ap_xer_print_s1ap_handoverfailure,

@@ -1943,8 +1943,8 @@ status_t mme_ue_remove(mme_ue_t *mme_ue)
     /* Free UeRadioCapability */
     if (mme_ue->radio_capa)
     {
-        S1ap_UERadioCapability_t *radio_capa = 
-            (S1ap_UERadioCapability_t *)mme_ue->radio_capa;
+        S1AP_UERadioCapability_t *radio_capa = 
+            (S1AP_UERadioCapability_t *)mme_ue->radio_capa;
 
         if (radio_capa->buf)
             CORE_FREE(radio_capa->buf);

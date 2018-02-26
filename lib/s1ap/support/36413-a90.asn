@@ -6014,7 +6014,7 @@ IMPORTS
 
 FROM S1AP-CommonDataTypes;
 
-S1ap-IE ::= SEQUENCE {
+S1AP-IE ::= SEQUENCE {
     id          ProtocolIE-ID,
     criticality Criticality,
     value       ANY

@@ -83,7 +83,7 @@ static asn_TYPE_member_t asn_MBR_PrivateIE_Field_5987P0_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PrivateIE_Field_5987P0, id),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		+1,	/* EXPLICIT tag at current level */
-		&asn_DEF_S1ap_PrivateIE_ID,
+		&asn_DEF_S1AP_PrivateIE_ID,
 		memb_id_constraint_1,
 		&asn_PER_memb_id_constr_2,
 		0,
@@ -92,7 +92,7 @@ static asn_TYPE_member_t asn_MBR_PrivateIE_Field_5987P0_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PrivateIE_Field_5987P0, criticality),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_S1ap_Criticality,
+		&asn_DEF_S1AP_Criticality,
 		memb_criticality_constraint_1,
 		&asn_PER_memb_criticality_constr_3,
 		0,

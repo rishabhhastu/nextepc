@@ -89,16 +89,16 @@ constantReplacements = {}
 
 # Extracting S1AP-PDU-Contents
 for i in re.findall(r'^([\w-]+)\s*S1AP-PROTOCOL-', lines, re.MULTILINE):
-    structReplacements[i] = 'S1ap-' + i
+    structReplacements[i] = 'S1AP-' + i
 for i in re.findall(r'([\w-]+)\s*::=\s+E-RAB-IE-Container', lines, re.MULTILINE):
-    structReplacements[i] = 'S1ap-' + i
+    structReplacements[i] = 'S1AP-' + i
 # Extracting S1AP-IEs
 for i in re.findall(r'([\w-]+)\s*::=\s*' + asnType, lines, re.MULTILINE):
-    structReplacements[i[0]] = 'S1ap-' + i[0]
+    structReplacements[i[0]] = 'S1AP-' + i[0]
 
 # Removing not to replace structures
 del structReplacements['S1AP-PDU']
-del structReplacements['S1ap-IE']
+del structReplacements['S1AP-IE']
 
 # Extracting S1AP-Constant
 for i in re.findall(r'([\w-]+)\s*INTEGER\s*::=', lines, re.MULTILINE):
@@ -115,12 +115,12 @@ for line in in_file:
     # Extracting S1AP-PDU-Containers
     line = structPattern.sub(lambda x: structReplacements[x.group()], line)
     line = constantPattern.sub(lambda x: constantReplacements[x.group()], line)
-    line = line.replace('id-S1ap-', 'id-')
-    line = line.replace('GW-S1ap-S1ap-TransportLayerAddress', 'GW-TransportLayerAddress')
-    line = line.replace('GW-S1ap-TransportLayerAddress', 'GW-TransportLayerAddress')
-    line = line.replace('SourceMME-S1ap-S1ap-GUMMEI', 'SourceMME-GUMMEI')
-    line = line.replace('SourceMME-S1ap-GUMMEI', 'SourceMME-GUMMEI')
-    line = line.replace('S1ap-S1ap-ProtocolIE-ID', 'S1ap-ProtocolIE-ID')
+    line = line.replace('id-S1AP-', 'id-')
+    line = line.replace('GW-S1ap-S1AP-TransportLayerAddress', 'GW-TransportLayerAddress')
+    line = line.replace('GW-S1AP-TransportLayerAddress', 'GW-TransportLayerAddress')
+    line = line.replace('SourceMME-S1ap-S1AP-GUMMEI', 'SourceMME-GUMMEI')
+    line = line.replace('SourceMME-S1AP-GUMMEI', 'SourceMME-GUMMEI')
+    line = line.replace('S1AP-S1AP-ProtocolIE-ID', 'S1AP-ProtocolIE-ID')
     out_file.write(line)
 
 in_file.close()

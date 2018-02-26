@@ -12,9 +12,9 @@
 #include "asn_application.h"
 
 /* Including external dependencies */
-#include "S1ap-InitiatingMessage.h"
-#include "S1ap-SuccessfulOutcome.h"
-#include "S1ap-UnsuccessfulOutcome.h"
+#include "S1AP-InitiatingMessage.h"
+#include "S1AP-SuccessfulOutcome.h"
+#include "S1AP-UnsuccessfulOutcome.h"
 #include "constr_CHOICE.h"
 
 #ifdef __cplusplus
@@ -35,9 +35,9 @@ typedef enum S1AP_PDU_PR {
 typedef struct S1AP_PDU {
 	S1AP_PDU_PR present;
 	union S1AP_PDU_u {
-		S1ap_InitiatingMessage_t	 initiatingMessage;
-		S1ap_SuccessfulOutcome_t	 successfulOutcome;
-		S1ap_UnsuccessfulOutcome_t	 unsuccessfulOutcome;
+		S1AP_InitiatingMessage_t	 initiatingMessage;
+		S1AP_SuccessfulOutcome_t	 successfulOutcome;
+		S1AP_UnsuccessfulOutcome_t	 unsuccessfulOutcome;
 		/*
 		 * This type is extensible,
 		 * possible extensions are below.
